@@ -1,0 +1,110 @@
+.clear-fix {
+	line-height: 0;
+	clear: both;
+}
+
+.call-card-wrapper {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.container {
+	width: 100%;
+}
+
+.container>.inner-container {
+	margin: 20px 50px;
+}
+
+.call-card {
+	margin: 4px;
+	width: 220px;
+	background-color: #ffffff;
+}
+
+.call-card .top-bar {
+	position: relative;
+	background-color: rgb(145, 183, 231);
+}
+
+.call-card .top-bar[data-state=hover] {
+	background-color: rgb(120, 161, 226);
+}
+
+.call-card .top-bar[data-state=selected]{
+	background-color: rgb(87, 145, 219);
+}
+
+.call-card .top-bar .name {
+	float: left;
+}
+
+.call-card .top-bar .checkbox, .call-card .top-bar .call-button, .call-card .top-bar .join-button {
+	float: right;
+	margin-left: 4px;
+}
+
+.call-card .top-bar .checkbox {
+	margin-top: 0;
+}
+
+.call-card .no-calls-msg {
+	
+}
+
+.call-card .talking-table {
+	width: 100%;
+}
+
+.call-card .talking-table>tbody>tr>td {
+	padding: 2px;
+}
+
+.call-card .disconnect-button, .call-card .row-checkbox {
+	text-align: center;
+}
+
+.call-card .check-buttons {
+	display: block;
+	margin-top: 4px;
+	text-align: right;
+}
+
+.control-buttons {
+	display: block;
+	text-align: right;
+}
+
+.control-buttons div:first-child {
+	margin-bottom: 8px;
+}
+
+.control-buttons div {
+	margin-bottom: 0;
+}
+
+#you-container table tr td:first-child {
+	padding-left: 0;
+}
+
+#you-container table tr td {
+	padding-left: 25px;
+}
+
+#you-container .you-txt {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+#you-container .talking-txt .card:first-child  {
+	padding-left: 0;
+}
+
+#you-container .talking-txt .card {
+	padding-left: 15px;
+	display: inline-block;
+}
+
+#you-container  .check-all-button {
+	margin-left: 15px;
+}

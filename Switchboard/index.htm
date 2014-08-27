@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Switchboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<!-- others -->
+    <link href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!-- templates -->
+	<script type="text/template" id="page">
+		<div class="container">
+			<div class="inner-container">
+				<h1>Switchboard</h1>
+				<div id="phone-selection-container"></div>
+				<div id="you-container"></div>
+				<p id="no-calls-msg"><em>There are currently no phones connected.</em></p>
+				<div id="you-container"></div>
+				<div id="main-card-container" class="main-card-container">
+					<div class="call-card-wrapper" id="call-card-wrapper"></div>
+					<div class="control-buttons">
+						<div>
+							<button class="btn btn-small select-none-button">Select None [N]</button>
+							<button class="btn btn-small select-all-button">Select All [A]</button>
+						</div>
+						<div>
+							<button class="btn btn-info call-selected-button" disabled="disabled">Call Selected [C]</button>
+							<button class="btn btn-info disconnect-you-button" disabled="disabled">Disconnect You [H]</button>
+							<button class="btn btn-info disconnect-selected-button">Disconnect Selected [D]</button>
+							<button class="btn btn-primary link-selected-button">Link Selected [L]</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script type="text/template" id="phone-selection">
+		<div>
+			<p>Select your phone: <select class="phones-select"></select></p>
+		</div>
+	</script>
+	<script type="text/template" id="phone-selection-card-option">
+		<option value="<%= id%>"><%= id %>) <%= name %></option>
+	</script>
+	<script type="text/template" id="phone-selection-no-card-option">
+		<option value="">I do not have a phone.</option>
+	</script>
+	<script type="text/template" id="you">
+		<div class="alert alert-info">
+			<table>
+				<tr>
+					<td><strong>You are:</strong> <span class="you-txt"></span></td>
+					<td><strong>Talking to:</strong> <span class="no-one-txt"><em>No one.</em></span><span class="talking-txt"></span><button class="btn btn-mini check-all-button">Check All/None [T]</button></td>
+				</tr>
+			</table>
+		</div>
+	</script>
+	<script type="text/template" id="you-card">
+		<span class="card"><%= id %>) <%= name %> <input type="checkbox" class="checkbox" /> <button class="btn btn-mini disconnect-button">X</button></span>
+	</script>
+	<script type="text/template" id="card">
+		<div class="call-card-wrapper">
+			<table class="call-card table table-bordered">
+				<thead>
+					<tr>
+						<th class="top-bar">
+							<input type="checkbox" class="checkbox" />
+							<button class="call-button btn btn-small" disabled="disabled">C</button>
+							<button class="join-button btn btn-small" disabled="disabled">J</button>
+							<span class="name"><%= id %>) <%= name %></span>
+							<div class="clear-fix"></div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div>Talking to:</div>
+							<p class="no-calls-msg"><em>Currently on hold.</em></p>
+							<div class="talking-table-container">
+								<table class="talking-table table table-bordered table-striped table-hover">
+									<tbody>
+									</tbody>
+								</table>
+								<div class="check-buttons">
+									<button class="btn btn-mini check-all-button">Check All/None</button>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</script>
+	<script type="text/template" id="talking-table-row">
+		<tr>
+			<td><%= id %>)</td>
+			<td><%= name %></td>
+			<td class="disconnect-button"><button class="btn btn-mini">X</button></td>
+			<td class="row-checkbox"><input type="checkbox" class="checkbox" /></td>
+		</tr>
+	</script>
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/disable_selection_plugin.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="js/number_event_plugin.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+	<script src="js/app.js"></script>
+	
+  </head>
+  <body>
+	<p>Something has gone wrong or javascript is not enabled.</p>
+  </body>
+</html>
